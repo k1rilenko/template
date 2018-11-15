@@ -9,6 +9,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     del = require('del'),
     concat = require('gulp-concat'),
+    cleanCSS = require('gulp-clean-css'),
     reload = browserSync.reload;
 
 var path = {
@@ -71,6 +72,10 @@ gulp.task('scss:build', function() {
       browsers: ['last 10 versions'],
       cascade: false
     }))
+    .pipe(cleanCSS(cleanCSS({debug: true}, (details) => {
+      console.log(`${details.name}: ${details.stats.originalSize}`);
+      console.log(`${details.name}: ${details.stats.minifiedSize}`);
+    })))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.css))
     .pipe(reload({stream:true}));
