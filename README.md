@@ -1,7 +1,7 @@
 # readme
-* git clone 
-* npm i 
-* gulp
+1. git clone 
+2. npm i 
+3. gulp
 
 
 * gulp clean - очистить папку build
