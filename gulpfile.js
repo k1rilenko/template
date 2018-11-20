@@ -41,7 +41,7 @@ gulp.task('html:build', function() {
   gulp.src(path.src.html)
     .pipe(rigger())
     .pipe(gulp.dest(path.build.html))
-    .pipe(reload({ stream: true}));
+    .pipe(browserSync.stream());
 });
 
 gulp.task('js:build', function() {
@@ -50,7 +50,7 @@ gulp.task('js:build', function() {
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.build.js))
-    .pipe(reload({stream: true}));
+    .pipe(browserSync.stream());
 });
 
 gulp.task('scss:build', function() {
@@ -58,7 +58,7 @@ gulp.task('scss:build', function() {
     .pipe(plumber({
       errorHandler: notify.onError( function(err) {
         return {
-          title: 'styles error',
+          title: 'Style error',
           message: err.message
         }
       })
@@ -76,9 +76,12 @@ gulp.task('scss:build', function() {
       console.log(`${details.name}: ${details.stats.originalSize}`);
       console.log(`${details.name}: ${details.stats.minifiedSize}`);
     })))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('./', {
+            includeContent: true,
+            sourceRoot: 'src/style'
+        }))
     .pipe(gulp.dest(path.build.css))
-    .pipe(reload({stream:true}));
+    .pipe(browserSync.stream());
 });
 
 gulp.task('fonts:build', function() {
@@ -124,7 +127,8 @@ gulp.task('server', function() {
   browserSync.init({
     server: {
       baseDir: './build'
-    }
+    },
+    port: 4444
   });
 });
   
@@ -133,8 +137,3 @@ gulp.task('clean', function() {
 });
 
 gulp.task('default', ['build', 'server', 'watch']);
-
-
-
-
-
