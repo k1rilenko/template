@@ -1,0 +1,82 @@
+@import "config";
+.cat {
+  display: flex;
+  flex-direction: column;
+}
+.cat__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cat__wrapper_top {
+  margin: 3rem 0;
+  .cat__block {
+    width: 31%;
+  }
+}
+.cat__wrapper_bottom {
+  .cat__block {
+    width: 47.5%;
+  }
+}
+.cat__block {
+  display: flex;
+  height: 30.6rem;
+  background-position: 50%;
+  background-size: cover;
+  background-color: $grey;
+}
+.cat__block_sleep {
+  background-image: url(/img/sleeproom.jpg);
+}
+.cat__block_guest {
+  background-image: url(/img/guestroom.jpg);
+}
+.cat__block_kit {
+  background-image: url(/img/kitchen.jpg);
+}
+.cat__block_child {
+  background-image: url(/img/childroom.jpg);
+}
+.cat__block_hall {
+  background-image: url(/img/hall.jpg);
+}
+.cat__link {
+  position: relative;
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 5rem;
+  width: 86.6%;
+  height: 5rem;
+  text-align: center;
+  background-color: #fff;
+  opacity: 0.8;
+  margin: auto auto 3.7rem auto;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 86.6%;
+    height: 1px;
+    background-color: #fff;
+    bottom: -1rem;
+    left: calc(58% - 50%);
+  }
+}
+.page-cat {
+  .cat__wrapper_top {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .cat__block {
+    width: 36rem;
+    height: 30.6rem;
+    margin-bottom: 3rem;
+  }
+  }
+}
+@media screen and (max-width: 1120px) {
+  .page-cat {
+    .cat__wrapper_top {
+      justify-content: space-around;
+    }
+  }
+}

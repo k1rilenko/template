@@ -1,0 +1,49 @@
+@import "config";
+.features {
+  background-color: $grey;
+}
+.features__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.features__wrapper_top {
+  padding: 0 8rem;
+  margin-bottom: 8.4rem;
+  .features__item {
+    width: 20%;
+  }
+}
+.features__wrapper_bottom {
+  padding-bottom: 7rem;
+  .features__item {
+    width: 16.6%;
+  }
+}
+.features__item {
+  font-family: $mm;
+  font-size: 1.6rem;
+  
+}
+.features__img {
+  position: relative;
+  height: 8.3rem;
+  margin-bottom: 2.3rem;
+  img {
+    display: flex;
+    margin: auto;
+    width: 6.6rem;
+    height: 6.6rem;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 41%;
+    height: 1px;
+    background-color: red;
+    bottom: 0;
+    left: calc(50% - 20.5%);
+  }
+}
+.features__text {
+  text-align: center;
+}

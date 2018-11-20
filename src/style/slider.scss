@@ -1,0 +1,66 @@
+@import "config";
+.slider__item-1, .slider__item-2, .slider__item-3 {
+  min-height: 60rem;
+  background-image: url(/img/domenika_kor.jpg);
+  background-size: cover;
+}
+.slider__block {
+  display: flex;
+  flex-direction: column;
+  margin: 13rem 8rem 2rem auto;
+  width: 38%;
+  .slider__button {
+    position: relative;
+    margin-top: 2.2rem;
+    .slider__arrow {
+      position: relative;
+      margin-left: 10.5rem;
+      display: flex;
+      align-self: center;
+      width: 3rem;
+      height: 2px;
+      background-color: #fff;
+      &::after, &::before {
+        position: absolute;
+        content: "";
+        width: 0.7rem;
+        height: 2px;
+        background-color: #fff;
+        right: 0;
+      }
+      &::after {
+        top: -2px;
+        transform: rotate(45deg);
+      }
+      &::before {
+        top: 2px;
+        transform: rotate(135deg)
+      }
+    }
+  }
+}
+.slider__text {
+  padding: 2rem 1.6rem 3.6rem;
+  background-color: #fff;
+  opacity: 0.9;
+}
+.slider__title {
+  font-family: $mm;
+  font-size: 3.6rem; 
+  margin-bottom: 2rem;
+}
+.slider__info {
+  font-family: $ml;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+@media screen and (max-width: 900px) {
+  .slider__block {
+   width: 60%; 
+  }
+}
+@media screen and (max-width: 900px) {
+  .slider__block {
+   width: 70%; 
+  }
+}

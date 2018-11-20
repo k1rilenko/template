@@ -1,0 +1,30 @@
+@import "config";
+.breadcrumbs {
+  margin: 2.5rem 0 1.6rem 0;
+}
+.breadcrumbs__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.breadcrumbs__item:not(:last-child) {
+  position: relative;
+  padding-right: 2.4rem;
+  &::after {
+    position: absolute;
+    content: "\1f802";
+    width: 1.1rem;
+    height: 0.7rem;
+    right: 0.65rem;
+    top: 0.2rem;
+  }
+}
+.breadcrumbs__item:last-child {
+  .breadcrumbs__link {
+    color: $red;
+  }
+}
+
+.breadcrumbs__link {
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+}

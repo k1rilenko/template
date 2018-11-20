@@ -1,0 +1,40 @@
+.mobile-icon {
+  margin-top: 1.2rem;
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  cursor: pointer; 
+}
+.mobile-icon__line {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  background-color: #fff;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out; 
+}
+.mobile-icon__line:first-child {
+  top: 0px; }
+.mobile-icon__line:nth-child(2), .mobile-icon__line:nth-child(3) {
+  top: 6px; }
+.mobile-icon__line:last-child {
+  top: 12px; }
+.mobile-icon_open {
+  .mobile-icon__line:first-child {
+    top: 18px;
+    width: 0%;
+    left: 50%; }
+  .mobile-icon__line:nth-child(2) {
+    transform: rotate(45deg); }
+  .mobile-icon__line:nth-child(3) {
+    transform: rotate(-45deg); }
+  .mobile-icon__line:last-child {
+    top: 18px;
+    width: 0%;
+    left: 50%; }
+}

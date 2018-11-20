@@ -1,0 +1,32 @@
+@import "config";
+.page-title {
+  font-size: 3rem;
+  margin-bottom: 0rem;
+}
+.cat__block_description {
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+.cat__block_sleep-set {
+  background-image: url(/img/cat_sleepset.jpg);
+}
+.cat__block_bed {
+  background-image: url(/img/cat_bed.jpg);
+}
+.cat__block_storage {
+  background-image: url(/img/cat_bed.jpg);
+}
+.cat__block_mattress {
+  background-image: url(/img/cat_matt.jpg);
+}
+.cat__block_bed-textiles {
+  background-image: url(/img/cat_tex.jpg);
+}
+.page-cat {
+  .cat__wrapper_top:first-child {
+    margin: 1rem 0;
+  }
+}
+.row-margin {
+  margin-bottom: 7.4rem;
+}

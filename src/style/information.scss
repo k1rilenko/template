@@ -1,0 +1,39 @@
+@import "config";
+.information {
+  background-color: $grey;
+}
+.information__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.information__item {
+  width: 31%;
+}
+.new__image {
+  width: 100%;
+  height: auto;
+  max-height: 20.7rem;
+  margin-bottom: 1.6rem;
+  img {
+    object-fit: contain;
+  }
+}
+.new__title {
+  font-size: 2rem;
+  min-height: 4.3rem;
+  margin-bottom: 1.6rem;
+}
+.new__link {
+  font-size: 1.5rem;
+  color: $dgrey;
+  text-decoration: underline;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 7.2rem;
+}
+.information__button {
+    margin: 4rem auto 0;
+}

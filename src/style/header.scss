@@ -1,0 +1,316 @@
+@import "config";
+.wrapper-top {
+  position: relative;
+  background-color: $grey;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 0.9rem;
+}
+.top-menu__list {
+  padding: 1.2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header-block {
+  width: 100%;
+  font-family: $mr;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  display: flex;
+
+  .block-logo {
+    width: 37%;
+  }
+  .block-location {
+    position: relative;
+    padding-left: 3rem;
+    width: 18%;
+   
+  }
+  .block-email {
+    position: relative;
+    padding-left: 3.5rem;
+    width: 18%;
+  }
+  .block-phone {
+    padding-left: 3.5rem;
+    width: 21%;
+  }
+  .header-callbutton {
+    width: 23%;
+  }
+}
+.block-location__link,
+.block-email__link {
+  font-family: $mm;
+  text-decoration: underline;
+}
+.header-block__section:not(:first-child){
+  padding-top: 1.4rem;
+}
+.block-location, .block-email {
+   &::before {
+      content: '';
+      position: absolute;
+      width: 2.5rem;
+      height: 2rem;
+      left: 1;
+      top: 20;
+      background-repeat: no-repeat;
+     background-position: 50% 50%;
+    }
+}
+.block-location::before {
+  background-image: url(/img/pin.png);
+}
+.block-email::before {
+  background-image: url(/img/mail.png);
+}
+.phone-number {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 1.5rem;
+    height: 2rem;
+    left: -3.5rem;
+    background-repeat:  no-repeat;
+    background-position: 50% 50%;
+  }
+}
+.phone-number_life::before {
+  background-image: url(/img/life.png);
+}
+.phone-number_mts::before {
+  background-image: url(/img/mts.png);
+}
+.phone-number_static::before {
+  background-image: url(/img/tel.png); 
+}
+.phone-number_bold {
+  font-family: $mb;
+}
+.wrapper-bottom {
+  margin-top: 1rem;
+background: $red-gr;
+}
+.container-menu {
+  display: flex;
+  position: relative;
+  align-content: center;
+  justify-content: space-between;
+}
+.header-menu {
+  width: 84%;
+}
+.menu__list {
+  font-family: $ml;
+  line-height: 2.2rem;
+  text-transform: uppercase;
+  display: flex;
+}
+.menu__link {
+  position: relative;
+  width: 18rem;
+  margin-left: 3.5rem;
+  color: #fff;
+  padding: 0.9rem 0;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2.7rem;
+    height: 2.7rem;
+    top: 5;
+    left: -3.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }  
+}
+.menu__item {
+  width: 20%;
+}
+.menu__item:first-child {
+ .menu__link {
+  &::before {
+    background-image: url(/img/all_goods.png);
+  } 
+}
+}
+.menu__item:nth-child(2) {
+ .menu__link {
+  &::before {
+    background-image: url(/img/rooms.png);
+  } 
+}
+}
+.menu__item:nth-child(3) {
+ .menu__link {
+  &::before {
+    background-image: url(/img/screw.png);
+  } 
+}
+}
+.menu__item:nth-child(4) {
+ .menu__link {
+  &::before {
+    background-image: url(/img/manufact.png);
+  } 
+}
+} 
+.search {
+  margin: 1.2rem 0 0 0;
+}
+.search__input {
+  border: none;
+  background-color: transparent;
+  &[placeholder] {
+    font-size: 1.3rem;
+    color: #fff;
+  }
+  &::-webkit-input-placeholder {
+    color: #fff;
+  }
+}
+.search { 
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    background-image: url(/img/search_icon.png);
+    background-position: 50% 50%;
+    left: -2.5rem;
+  }
+}
+
+.dropdown-arrow {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 7px;
+  height: 4px;
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 1px;
+    background-color: #000;
+    top: 0;
+  }
+  &::before {
+    transform: rotate(225deg);
+  }
+  &::after {
+    transform: rotate(135deg);
+    right: 0;
+  }
+}
+.menu__link_drop {
+  .dropdown-arrow {
+    margin-left: 0.5rem;
+     &::before, &::after {
+       background-color: #fff;
+    }
+  }
+}
+.menu__dropdown {
+  position: absolute;
+  display: none;
+  width: 95%;
+  z-index: 1000;
+  background-color: #fff;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.dropdown-menu__column {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width:20%;
+  text-transform: none;
+  padding-top: 1.8rem;
+  padding-bottom: 2.8rem;
+  padding-left: 3.9rem;
+  .dropdown-menu__item {
+    font-family: $mm;
+    line-height: 2.6rem;
+  }
+  .dropdown-menu__link {
+    &:hover {
+      color: $red;
+    }
+  }
+}
+.dropdown-menu__column_parent {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 90%;
+    background-color: $grey;
+    top: 0;
+    right: 0;
+  }
+  .dropdown-arrow {
+    align-self: center;
+    margin: 0 0.6rem 0 auto;
+    transform: rotate(270deg);
+  } 
+  .dropdown-menu__link {
+    display: flex;
+  }
+}
+.dropdown-rooms{
+  display: none;
+  left: 15;
+  width: 79%;
+  padding: 2.4rem 9.8rem; 
+}
+.dropdown-rooms__wrapper {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+.dropdown-rooms__items {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width:17.4%;
+}
+.dropdown-rooms__link {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: transparent;
+  &:hover {
+    transition: all 0.4s ease;
+    background-color: $grey;
+  }
+}
+.dropdown-rooms__text {
+  margin: 0 auto 1.1rem auto;
+  text-transform: none;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+.dropdown-rooms__icon {
+  height: 10rem;
+  img {
+    object-fit: contain;
+    display: flex;
+    margin: 1.85rem auto 0 auto;
+    width: 6.5rem;
+    max-height: 6.5rem;
+  }
+}
+.menu__item:hover > .menu__dropdown {
+  display: flex;
+}
+.menu__item:hover > .menu__link {
+  color: #000;
+}
+
+//points 
+

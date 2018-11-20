@@ -1,0 +1,45 @@
+@import "config";
+.slider_pay{
+  .slider__item_1 {
+    height: 50rem;
+    background-image: url(/img/pay_background.jpg);
+    background-size: cover;
+  }
+  .slider__wrapper {
+    width: 100%;
+    display: flex;
+  }
+  .slider__title {
+    margin-bottom: 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  .slider__block {
+    width: 50%;
+  }
+  .slider__block-right {
+    margin: 12.7rem 0 0 0;
+    padding-right: 2.1rem;
+  }
+  .slider__block-left {
+    margin: 10.5rem 0 0 0;
+    img {
+      max-width: 453px;
+      height: auto;
+    }
+  }
+  .slider__text {
+    font-family: $ml;
+    font-size: 1.6rem;
+    background-color: transparent;
+    text-align: right;
+    padding: 4.8rem 0 8.5rem;
+  }
+  .slider__title_background_white {
+    background-color: #fff;
+  }
+  .slider__button {
+    margin-left: auto;
+    margin-right: 0.6rem;
+  }
+}

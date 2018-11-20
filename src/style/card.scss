@@ -1,0 +1,67 @@
+@import "config";
+.card {
+  margin: 0 1.5rem;
+  display: flex;
+  border: 1px solid $grey;
+  transition: all 0.6s ease;
+  }
+.card:hover .card__button {
+  visibility: visible;
+  opacity: 1;
+}
+.card:hover .card__link {
+  color: $red;
+}
+.card__img {
+  height: 21rem;
+  background-color: $grey;
+  margin-bottom: 1.1rem;
+  img {
+    height: 21rem;
+  }
+}
+.card__wrapper {
+  padding: 0 1rem;
+}
+.card__title {
+  height: 5rem;
+  margin-bottom: 2.3rem;
+}
+.card__link {
+  font-family: $mm;
+  font-size: 2.4rem;
+}
+.card__categories {
+  font-family: $ml;
+  font-size: 1.6rem;
+  margin-bottom: 2.3rem;
+}
+.card__price {
+  margin-bottom: 3.6rem;
+}
+
+.card__cost {
+  font-family: $mb;
+  font-size: 2.4rem;
+  margin-right: 0.9rem;
+}
+.card__currency {
+  font-family: $ml;
+  font-size: 1.6rem;
+}
+.card__button {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  margin: 2rem auto;
+  width: 12.6rem;
+  height: 3.2rem;
+  font-size: 1.6rem;
+  line-height: 3.2rem;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: $red;
+  color: #fff;
+}

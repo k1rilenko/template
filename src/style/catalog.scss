@@ -1,0 +1,34 @@
+@import "config";
+.catalog__wrapper {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    min-width: 26.3rem;
+    margin: 0 1.5rem 3rem 0;
+  }
+  .card:hover {
+    transform: scale(1.1);
+  }
+  .card:hover .card__button {
+    opacity: 1;
+    visibility: visible;
+    display: flex!important;
+  }
+}
+  .catalog-breadcrumbs {
+    margin: 2.5rem 0 2.6rem 0;
+  }
+.catalog {
+    .catalog__title {
+    margin-bottom: 3.3rem;
+  }
+}
+.catalog-main{
+  .form {
+    margin-top: 1.9rem;
+  }
+}
