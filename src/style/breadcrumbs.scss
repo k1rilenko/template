@@ -27,4 +27,7 @@
 .breadcrumbs__link {
   font-size: 1.2rem;
   line-height: 2.2rem;
+  &:hover {
+    color: $red;
+  }
 }

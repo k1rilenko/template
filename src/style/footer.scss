@@ -2,6 +2,11 @@
 .footer {
   margin-top: 2.7rem!important;
   display: flex;
+  a{
+    &:hover {
+      color: $red;
+    }
+  }
 }
 .footer__category {
   width: 27%;

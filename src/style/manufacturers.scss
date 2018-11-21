@@ -7,9 +7,16 @@
     object-fit: contain;
   }
 }
-.manufacturers_logo {
+.manufacturers__logo {
   padding: 0 1.5rem;
 }
 .manufacturers__button {
   margin-top: 4.7rem;
+}
+.manufacturers__link {
+  opacity: 1;
+  transition: all .5s ease;
+  &:hover {
+    opacity: 0.6;
+  }
 }

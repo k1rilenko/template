@@ -47,7 +47,7 @@
     content: "";
     width: 6.8rem;
     height: 7.2rem;
-    background-image: url(/img/catalog.png);
+    background-image: url(../img/catalog.png);
     }
 }
 .manufact__body {
@@ -75,6 +75,6 @@
   }
   .manufact-description__text {
     width: 100%;
-    text-align: center;
+    text-align: left;
   }
 }

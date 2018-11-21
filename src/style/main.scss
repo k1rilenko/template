@@ -9,6 +9,7 @@ body {
   font-size: 1.4rem;
   font-family: $mr;
   box-sizing: border-box;
+  color: $black;
 }
 p {
   margin: 0;
@@ -25,6 +26,12 @@ a {
   text-decoration: none;
   color: #000;
   display: inline-block;
+  outline: none;
+  &:focus, &:active,  {
+    outline: none;
+    border: none;
+  }
+
 }
 h2 {
   margin: 0;
@@ -44,11 +51,24 @@ button {
   background-color: transparent;
   cursor: pointer;
   text-align: center;
+  outline: none;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
 }
 .container {
   max-width: 117rem;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+.block-title {
+  position: relative;
 }
 .title {
   position: relative;
@@ -56,56 +76,42 @@ button {
   text-align: center;
   margin-bottom: 6.6rem;
   font-family: $ml;
+  color: $bt;
   letter-spacing: 2px;
-  &::before {
-    position: absolute;
-    font-size: 12rem;
-    color: $textgrey;
-    z-index: -1;
-    top: -80;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -15%)
-  }
+}
+.title-shadow {
+  top:-75;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -15%);
+  position: absolute;
+  font-size: 12rem;
+  color: $textgrey;
+  z-index: -1;
+  white-space: nowrap;
+}
+.title-shadow_grey {
+  color: $titlegrey;
+  z-index: 1;
+  top: 60;
 }
 .popular__title{
   margin-top: 11.2rem;
-  &::before {
-  content: "Популярные";
-  }
 }
 .sale__title{
   margin-top: 13.7rem;
-  &::before{ 
-  content: "Товары на акции";
-  }
 }
 .features__title {
   z-index: 2;
   padding-top: 13.4rem;
   margin-bottom: 9.3rem;
-  &::before {
-  top: 60;
-  color: $titlegrey;
-  z-index: -1;
-  content: "Преимущества";
-  }
 }
 .manufacturers__title {
   margin-top: 14rem;
-  &::before {
-  content: "Производители";
-}
 }
 .information__title {
   z-index: 2;
   padding-top: 13.7rem;
-  &::before {
-    z-index: -1;
-  top: 62;
-  color: $titlegrey;  
-  content: "Информация";
-}
 }
 .slider__button {
   display: flex;
@@ -130,8 +136,14 @@ button {
   border-radius: 5px;
   text-align: center;
   line-height: 4.8rem;
+    &:hover {
+      color: $red;
+      border: 1px solid $red;
+  }
 }
 .header-callbutton__callback {
+  font-size: 1.5rem;
+  font-family: $mr;
   width: 17.8rem;
   height: 4rem;
   line-height: 4rem;
@@ -139,13 +151,19 @@ button {
   border-radius: 5px;
   color: $red;
   margin: 1rem auto 0;
+  transition: all .2s ease;
+  &:hover {
+    color: $dgrey;
+    border: 1px solid $dgrey;
+    transform: scale(1.1);
+  }
 }
 .arrow {
   position: absolute;
   width: 2.2rem;
   height: 4rem;
   top: calc(50% - 1.1rem);
-  background-image: url(/img/right-arrow.svg);
+  background-image: url(../img/right-arrow.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -164,20 +182,22 @@ button {
   width: 6.6rem;
   height: 6.6rem;
   top: calc(50% - 3.3rem);
-  background-image: url(/img/arrow-in-circle.svg);
+  background-image: url(../img/button_slider.png);
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 5;
   cursor: pointer;
+  &:hover, &:active {
+    opacity: 0.7;
+  }
 }
 .arrow-circle-prev {
-  transform: rotate(270deg);
-  left: 15%;
+  transform: rotate(180deg);
+  left: 18%;
 }
 .arrow-circle-next {
-  transform: rotate(90deg);
-  right: 15%;
+  right: 19.5%;
 }
 @media screen and (max-width: 1220px) {
   .arrow-next {
@@ -188,10 +208,8 @@ button {
 }
 }
 @media screen and (max-width: 1014px) {
-  .title {
-    &:before {
+  .title-shadow {
       font-size: 8rem;
-    }
   }
 }
 @media screen and (max-width: 960px) {
@@ -288,10 +306,8 @@ button {
 }
 
 @media screen and (max-width: 680px) {
-  .title {
-    &:before {
+  .title-shadow {
       font-size: 6rem;
-    }
   }
   
 }
@@ -391,10 +407,8 @@ button {
       margin-bottom: 1rem;
     }
   }
-  .title {
-    &:before {
+  .title-shadow {
       font-size: 4.5rem;
-    }
   }
 }
 

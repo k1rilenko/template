@@ -20,26 +20,22 @@
   }
 }
 .cat__block {
+  position: relative;
   display: flex;
   height: 30.6rem;
   background-position: 50%;
   background-size: cover;
   background-color: $grey;
+  transition: all .3s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
-.cat__block_sleep {
-  background-image: url(/img/sleeproom.jpg);
-}
-.cat__block_guest {
-  background-image: url(/img/guestroom.jpg);
-}
-.cat__block_kit {
-  background-image: url(/img/kitchen.jpg);
-}
-.cat__block_child {
-  background-image: url(/img/childroom.jpg);
-}
-.cat__block_hall {
-  background-image: url(/img/hall.jpg);
+.cat__background {
+  position: absolute;
+  max-width: 57rem;
+  height: 100%;
+  object-fit: cover;
 }
 .cat__link {
   position: relative;

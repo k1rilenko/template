@@ -1,7 +1,8 @@
 @import "config";
 .form {
+  position: relative;
   margin-top: 6.9rem;
-  background-image: url(/img/form-background.jpg);
+  background-image: url(../img/form-background.jpg);
   background-size: contain;
   padding: 4.5rem 0;
 }

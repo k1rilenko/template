@@ -1,9 +1,10 @@
 @import "config";
 .slider_pay{
-  .slider__item_1 {
-    height: 50rem;
-    background-image: url(/img/pay_background.jpg);
-    background-size: cover;
+  .slider__item {
+    min-height: 50rem;
+  }
+  .slider__image {
+    z-index: -1;
   }
   .slider__wrapper {
     width: 100%;

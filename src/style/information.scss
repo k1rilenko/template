@@ -28,6 +28,9 @@
   font-size: 1.5rem;
   color: $dgrey;
   text-decoration: underline;
+  &:hover {
+    color: $red;
+  }
 }
 .button-wrapper {
   display: flex;

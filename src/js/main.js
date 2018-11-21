@@ -9,12 +9,15 @@ $(function() {
   
   $('.slider').slick({
     infinite: true,
+    focusOnSelect: false,
+    adaptiveHeight: true,
     dots: true,
     prevArrow: '<div class="arrow-circle arrow-circle-prev"></div>',
     nextArrow: '<div class="arrow-circle arrow-circle-next"></div>'
   });
   $('.popular__slider').slick({
   infinite: true,
+  focusOnSelect: false,
   autoplay: true,
   slidesToShow: 4,
   slidesToScroll: 4,
@@ -57,6 +60,7 @@ $(function() {
   $('.sale__slider').slick({
   infinite: true,
   slidesToShow: 4,
+  focusOnSelect: false,
   autoplay: true,
   slidesToScroll: 4,
   prevArrow: '<div class="arrow arrow-prev"></div>',
@@ -99,6 +103,7 @@ $(function() {
   infinite: true,
   autoplay: true,
   slidesToShow: 4,
+  focusOnSelect: false,
   slidesToScroll: 1,
   prevArrow: '<div class="arrow arrow-prev"></div>',
   nextArrow: '<div class="arrow arrow-next"></div>'  
