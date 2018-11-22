@@ -24,12 +24,26 @@
   
   .block-email, .block-location {
     position: relative;
+    color: $bt;
     &::before {
       top: 0;
       left: 0.5rem;
       width: 2.8rem;
       height: 3.6rem;
       background-size: contain;
+    }
+  }
+  .block-location__link, .block-email__link {
+    color: $bt;
+  }
+  .block-email {
+    &::before {
+      background-image: url(../img/mail_big.png);
+    }
+  }
+  .block-location {
+    &::before {
+      background-image: url(../img/pin_big.png);
     }
   }
   .block-phone, .block-location, .block-email {

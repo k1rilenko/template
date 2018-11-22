@@ -3,7 +3,6 @@ $(function() {
   $('.mobile-icon').click(function() {
     $(this).siblings('.menu__list').toggle();
     $(this).toggleClass('mobile-icon_open');
-    $('.top-menu__list').toggle();
   });
 });
   

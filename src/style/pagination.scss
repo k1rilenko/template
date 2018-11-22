@@ -13,6 +13,9 @@
   }
   .pagination__link {
     display: inline-block;
+    &:hover {
+      color: $red;
+    } 
   } 
   .pagination__link_active {
     color: $red;

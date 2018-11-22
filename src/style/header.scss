@@ -42,6 +42,11 @@
     padding-left: 3.5rem;
     width: 21%;
   }
+  .block-phone__number {
+    &:hover {
+      color: $red;
+    }
+  }
   .header-callbutton {
     width: 23%;
   }
@@ -110,6 +115,7 @@ background: $red-gr;
   justify-content: space-between;
 }
 .header-menu {
+  position: relative;
   width: 84%;
 }
 .menu__list {
@@ -172,6 +178,7 @@ background: $red-gr;
     height: 2rem;
     background-image: url(../img/search_icon.png);
     background-position: 50% 50%;
+    background-repeat: no-repeat;
     left: -2.5rem;
   }
 }
